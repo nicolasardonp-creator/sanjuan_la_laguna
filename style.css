@@ -1,0 +1,109 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#102a24;--green:#173d33;--green2:#245548;--cream:#f5f0e6;--paper:#fbf9f4;--gold:#d2b77a;--blue:#397f91;--muted:#68716d}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+.header{position:fixed;z-index:100;top:0;left:0;width:100%;height:78px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;color:#fff;transition:.35s}
+.header.scrolled{height:66px;background:rgba(16,42,36,.94);backdrop-filter:blur(15px)}
+.brand{color:#fff;text-decoration:none;font-size:.8rem;letter-spacing:2px;font-weight:700}
+.brand i{font-style:normal;font-weight:400;color:#d8c89e}
+nav{display:flex;gap:30px}
+nav a{color:#fff;text-decoration:none;font-size:.75rem;letter-spacing:.8px;font-weight:600}
+nav a:hover{color:var(--gold)}
+.hamburger{display:none;border:0;background:none;color:#fff;font-size:1.6rem}
+.hero{height:100vh;min-height:650px;position:relative;display:flex;align-items:center;padding:100px 8vw;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url("https://www.guatemala.com/fotos/201707/San-Juan-La-Laguna-es-la-ciudad-mas-genial-de-Centroamerica.jpg");background-size:cover;background-position:center;transform:scale(1.03)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,29,24,.88),rgba(7,29,24,.35) 65%,rgba(7,29,24,.18))}
+.hero-content{position:relative;max-width:800px;z-index:2}
+.pill{display:inline-block;border:1px solid rgba(255,255,255,.4);padding:9px 13px;font-size:.63rem;letter-spacing:2px;margin-bottom:26px}
+.hero h1{font-family:Fraunces,serif;font-size:clamp(4.2rem,9vw,8.5rem);line-height:.84;letter-spacing:-5px}
+.hero h1 em,.destination em,.section-top em,.culture em,.eco-heading em,.gallery-head em,.final em{color:var(--gold);font-style:italic}
+.hero p{max-width:560px;font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.82);margin:30px 0}
+.hero-cta{display:inline-flex;align-items:center;gap:25px;background:var(--gold);color:var(--ink);padding:16px 19px;text-decoration:none;font-size:.75rem;font-weight:700;transition:.25s}
+.hero-cta:hover{transform:translateY(-3px);padding-right:25px}
+.hero-cta span{font-size:1rem}
+.hero-bottom{position:absolute;bottom:30px;left:8vw;right:8vw;display:flex;justify-content:space-between;font-size:.6rem;letter-spacing:2px;color:rgba(255,255,255,.65)}
+.destination{padding:125px 8vw;background:var(--cream)}
+.mini-label{font-size:.63rem;letter-spacing:2.5px;font-weight:700;color:#8b7449}
+.gold{color:var(--gold)}
+.dest-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:9vw;margin-top:35px}
+h2{font-family:Fraunces,serif;font-size:clamp(3rem,5.5vw,5.7rem);line-height:.95;letter-spacing:-3px}
+.dest-copy{padding-top:5px;color:var(--muted);font-size:.95rem;line-height:1.8}
+.dest-copy p+p{margin-top:18px}
+.facts{display:flex;border-top:1px solid #d6cfbf;margin-top:40px;padding-top:20px}
+.facts div{width:33%;display:flex;align-items:center;gap:10px;border-right:1px solid #d6cfbf;padding-left:8px}
+.facts div:last-child{border:0}
+.facts b{font-size:1.3rem}.facts span{font-size:.65rem;line-height:1.35;text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+.why-visit{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}.why-visit div{background:#e6decd;padding:22px 24px;display:flex;align-items:center;gap:18px;border-left:3px solid var(--gold);transition:.25s}.why-visit div:hover{transform:translateY(-5px)}.why-visit strong{font-family:Fraunces,serif;font-size:1.5rem;color:var(--green)}.why-visit span{font-size:.68rem;line-height:1.4;text-transform:uppercase;letter-spacing:1px;font-weight:700;color:var(--muted)}
+.experiences{padding:120px 8vw;background:var(--green);color:#fff}
+.section-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:55px}
+.section-top h2{margin-top:18px}
+.section-top p{max-width:390px;color:rgba(255,255,255,.65);line-height:1.7;font-size:.9rem}
+.experience-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.experience{position:relative;min-height:390px;overflow:hidden;background:#204c40}
+.experience.main-card{grid-row:span 2;min-height:700px}
+.experience img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:.7s}
+.experience:hover img{transform:scale(1.06)}
+.experience:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(5,21,17,.9))}
+.experience-info{position:absolute;z-index:2;left:28px;right:28px;bottom:27px}
+.experience-info small,.wide-card small{font-size:.58rem;letter-spacing:2px;color:var(--gold);font-weight:700}
+.experience-info h3{font-family:Fraunces,serif;font-size:1.8rem;margin:8px 0}
+.experience-info p{font-size:.75rem;line-height:1.55;color:rgba(255,255,255,.72);max-width:450px}
+.art-placeholder{position:absolute;inset:0;padding:35px;background:linear-gradient(140deg,#8b6848,#4c3629);display:flex;flex-direction:column;justify-content:end}
+.art-placeholder.blue{background:linear-gradient(140deg,#4b8793,#173d45)}
+.art-placeholder span{font-size:2.5rem;position:absolute;right:28px;top:28px}
+.art-placeholder small{font-size:.58rem;letter-spacing:2px;color:#e3ca91}
+.art-placeholder h3{font-family:Fraunces,serif;font-size:1.9rem;margin:8px 0}
+.art-placeholder p{font-size:.75rem;color:rgba(255,255,255,.72);line-height:1.55}
+.wide-card{grid-column:span 2;min-height:210px;background:#d2b77a;color:var(--ink)}
+.wide-inner{height:100%;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.wide-card small{color:#735c31}
+.wide-card h3{font-family:Fraunces,serif;font-size:2.3rem;max-width:650px;margin-top:9px}
+.wide-card p{max-width:330px;color:#5e563f;line-height:1.6;font-size:.8rem}
+.culture{display:grid;grid-template-columns:1fr 1fr;min-height:720px;background:#ede5d6}
+.culture-image{position:relative;min-height:650px}
+.culture-image img{width:100%;height:100%;object-fit:cover}
+.vertical-text{position:absolute;left:22px;bottom:22px;writing-mode:vertical-rl;background:var(--green);color:#fff;padding:15px 10px;font-size:.58rem;letter-spacing:2px}
+.culture-copy{padding:110px 9vw;display:flex;flex-direction:column;justify-content:center}
+.culture-copy h2{margin:20px 0 25px}
+.culture-copy>p{max-width:500px;color:var(--muted);line-height:1.8;font-size:.95rem}
+.culture-list{margin-top:38px;border-top:1px solid #d0c6b4}
+.culture-list div{display:flex;gap:25px;padding:16px 0;border-bottom:1px solid #d0c6b4;font-size:.78rem}
+.culture-list span{color:#9d8758}.culture-list b{font-weight:600}
+.eco{padding:120px 8vw;background:var(--paper)}
+.eco-heading{max-width:700px}
+.eco-heading h2{margin:18px 0}
+.eco-heading p{color:var(--muted);line-height:1.7;max-width:530px}
+.eco-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:55px}
+.eco-card{background:var(--cream);padding:28px;min-height:250px;position:relative;border-top:3px solid var(--green);transition:.25s}
+.eco-card:hover{transform:translateY(-7px);box-shadow:0 18px 40px rgba(16,42,36,.09)}
+.eco-card>span{font-size:.58rem;color:#9c8450;letter-spacing:1px}
+.eco-card strong{display:block;font-size:1.8rem;margin:28px 0 15px}
+.eco-card h3{font-family:Fraunces,serif;font-size:1.35rem}.eco-card p{font-size:.72rem;line-height:1.6;color:var(--muted);margin-top:8px}
+.gallery{padding:115px 8vw;background:var(--green)}
+.gallery-head h2{color:#fff;margin-top:18px}
+.gallery-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;grid-template-rows:250px 250px;gap:10px;margin-top:55px}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:.5s;filter:saturate(.9)}
+.gallery-grid img:hover{filter:saturate(1.15);transform:scale(.99)}
+.gallery-grid img:first-child{grid-row:span 2}
+.gallery-grid img:nth-child(2){grid-column:span 2}
+.final{min-height:650px;background:linear-gradient(rgba(7,30,25,.85),rgba(7,30,25,.9)),url("https://www.guatemala.com/fotos/201707/San-Juan-La-Laguna-es-la-ciudad-mas-genial-de-Centroamerica.jpg") center/cover;display:grid;place-items:center;text-align:center;padding:80px 20px;color:#fff}
+.final-inner{max-width:850px}.final h2{font-size:clamp(3.5rem,7vw,7rem);margin:20px 0}
+.final p{color:rgba(255,255,255,.7);margin:0 auto 32px}
+footer{background:#091e19;color:#fff;padding:30px 8vw;display:flex;align-items:center;gap:30px;font-size:.68rem;letter-spacing:1px}
+footer b{font-size:.8rem}footer span{color:#8da099}footer small{margin-left:auto;color:#9aaba4;text-align:right;line-height:1.5;max-width:430px}
+@media(max-width:900px){
+ nav{display:none}.hamburger{display:block}.header.open nav{display:flex;position:absolute;top:66px;left:0;right:0;padding:25px 7vw;background:rgba(16,42,36,.98);flex-direction:column;gap:20px}
+ .dest-grid,.culture{grid-template-columns:1fr}.why-visit{grid-template-columns:1fr}.culture-image{height:500px;min-height:0}.culture-copy{padding:80px 8vw}
+ .eco-cards{grid-template-columns:1fr 1fr}.experience-grid{grid-template-columns:1fr}.experience.main-card{grid-row:auto;min-height:550px}.wide-card{grid-column:auto}
+}
+@media(max-width:600px){
+ .hero{padding:100px 7vw}.hero h1{font-size:4.2rem;letter-spacing:-3px}.hero-bottom{left:7vw;right:7vw}
+ .destination,.experiences,.eco,.gallery{padding:85px 6vw}.dest-grid{gap:35px}.why-visit{margin-top:35px}.facts{gap:5px}.facts div{padding-left:0}
+ .section-top{display:block}.section-top p{margin-top:20px}.experience{min-height:330px}.experience.main-card{min-height:430px}
+ .eco-cards{grid-template-columns:1fr}.gallery-grid{display:flex;flex-direction:column}.gallery-grid img{height:250px}
+ footer{flex-direction:column;align-items:flex-start;gap:12px}footer small{margin-left:0}
+}
+
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal-visible{opacity:1;transform:translateY(0)}
+@media(max-width:600px){.why-visit div{padding:18px}.why-visit{grid-template-columns:1fr 1fr}.why-visit div:last-child{grid-column:span 2}}
